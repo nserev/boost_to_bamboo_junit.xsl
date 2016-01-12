@@ -3,6 +3,7 @@ This is a simple xsl for migrating boost xml result to bamboo valid one
 
 At least for me, it wasn't working directly. So I created a simple xsl script to make the transformation between boost testing xml and bamboo junit format. In order to work the boost test output should look like this
 
+```
 <TestResult>
 <TestSuite name="Simple testcases" result="failed" assertions_passed="36" assertions_failed="10" expected_failures="0" test_cases_passed="3" test_cases_failed="2" test_cases_skipped="0" test_cases_aborted="0">
 <TestCase name="test1" result="passed" assertions_passed="4" assertions_failed="0" expected_failures="0">
@@ -17,9 +18,11 @@ At least for me, it wasn't working directly. So I created a simple xsl script to
 </TestCase>
 </TestSuite>
 </TestResult>
+```
 
 and after the xsl transformation the result becomes like this one
 
+```
 <?xml version="1.0"?>
 <testsuites total="5" failures="2" skipped="0" not-run="0">
   <testsuite name="Simple testcases" result="Fail" executed="True" time="0" asserts="46">
@@ -34,5 +37,5 @@ and after the xsl transformation the result becomes like this one
     </testcase>
   </testsuite>
 </testsuites>
-
+```
 Hope it helps someone :)
