@@ -39,3 +39,8 @@ and after the xsl transformation the result becomes like this one
 </testsuites>
 ```
 Hope it helps someone :)
+
+
+I have followed the following page for creating the bamboo valid xml
+
+https://confluence.atlassian.com/bamboo/junit-parsing-in-bamboo-289277357.html
